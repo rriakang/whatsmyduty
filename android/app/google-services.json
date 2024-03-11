@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627533329887",
+    "project_id": "myduty-a952f",
+    "storage_bucket": "myduty-a952f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627533329887:android:3ed11f6afb9db5ce41006a",
+        "android_client_info": {
+          "package_name": "com.example.myduty"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARihe-p8D08TzPhui43l5rv8z3599R9VE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
