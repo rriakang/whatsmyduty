@@ -54,27 +54,32 @@ class MyCard extends StatelessWidget {
               },
               decoration: BoxDecoration(
                 color: Colors.red[200],
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(40.0),
-                    bottomRight: Radius.circular(40.0)
-                ),
+
               ),
             ),
             ListTile(
               leading: Icon(Icons.home, color:Colors.grey[850],), // 첫 부분
-              title: Text("Home"),
+              title: Text("Duty 유형 수정"),
               onTap: () => {
                 print("home!!")
               },
-              trailing: Icon(Icons.add), //끝 부분
+
+            ),
+            ListTile(
+              leading: Icon(Icons.group, color:Colors.grey[850],), // 첫 부분
+              title: Text("공유하기"),
+              onTap: () => {
+                print("공유하기")
+              },
+
             ),
             ListTile(
               leading: Icon(Icons.settings, color:Colors.grey[850],), // 첫 부분
-              title: Text("Setting"),
+              title: Text("설정"),
               onTap: () => {
                 print("Setting!!")
               },
-              trailing: Icon(Icons.add), //끝 부분
+
             ),
             ListTile(
               leading: Icon(Icons.question_answer, color:Colors.grey[850],), // 첫 부분
@@ -82,7 +87,7 @@ class MyCard extends StatelessWidget {
               onTap: () => {
                 print("Q&A!!")
               },
-              trailing: Icon(Icons.add), //끝 부분
+
             ),
           ],
 
