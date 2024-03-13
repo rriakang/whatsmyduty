@@ -76,10 +76,12 @@ class MyCard extends StatelessWidget {
       ),
 
       body: Center(
+
         child:
           Column(
             children: <Widget>[
-              SizedBox(height: 110),
+              Text("D-123"),
+              SizedBox(height: 70),
               Row(
                 children: <Widget>[
                   Expanded(
