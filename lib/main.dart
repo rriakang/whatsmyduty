@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+//import 'package:myduty/screens/main_page.dart';
+import 'package:table_calendar/table_calendar.dart';
+
+
+
+
 
 void main() => runApp(MyApp());
+
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -15,10 +23,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+
 class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         backgroundColor: Color.fromARGB(1, 250, 250, 250),
         title: Text('Seoul Hospital'),
@@ -26,6 +37,7 @@ class MyCard extends StatelessWidget {
         elevation: 0.0,
       ),
       endDrawer: Drawer(
+
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -61,57 +73,54 @@ class MyCard extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: DefaultTabController(
-      //   length: 3,
-      //   child: Builder(
-      //     builder: (BuildContext context) {
-      //       return SizedBox(
-      //         height: 70,
-      //         child: Column(
-      //           children: [
-      //             TabBar(
-      //               tabs: <Widget>[
-      //                 Tab(
-      //                   icon: Icon(
-      //                     Icons.person,
-      //                     color: Colors.black,
-      //                   ),
-      //                 ),
-      //                 Tab(
-      //                   icon: Icon(
-      //                     Icons.home,
-      //                     color: Colors.black,
-      //                   ),
-      //                 ),
-      //                 Tab(
-      //                   icon: Icon(
-      //                     Icons.chat_bubble,
-      //                     color: Colors.black,
-      //                   ),
-      //                 ),
-      //               ],
-      //             ),
-      //             Expanded(
-      //               child: TabBarView(
-      //                 children: <Widget>[
-      //                   Container(
-      //                     child: Text('Person Tab Content'),
-      //                   ),
-      //                   Container(
-      //                     child: Text('Home Tab Content'),
-      //                   ),
-      //                   Container(
-      //                     child: Text('Chat Tab Content'),
-      //                   ),
-      //                 ],
-      //               ),
-      //             ),
-      //           ],
-      //         ),
-      //       );
-      //     },
-      //   ),
-      // ),
+      bottomNavigationBar: DefaultTabController(
+        length: 3,
+        child: Builder(
+          builder: (BuildContext context) {
+            return SizedBox(
+              height: 80,
+              child: Column(
+                children: [
+                  TabBar(
+                    tabs: <Widget>[
+                      Tab(
+                        icon: Icon(
+                          Icons.group,
+                          color: Colors.black,
+
+                        ),
+                        child: Text(
+                        '동료',
+                        ),
+
+                      ),
+                      Tab(
+                        icon: Icon(
+                          Icons.home,
+                          color: Colors.black,
+                        ),
+                        child: Text(
+                          '홈',
+                        ),
+                      ),
+                      Tab(
+                        icon: Icon(
+                          Icons.add_box,
+                          color: Colors.black,
+                        ),
+                        child: Text(
+                          '등록',
+                        ),
+                      ),
+                    ],
+                  ),
+
+                ],
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 }
