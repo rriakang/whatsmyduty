@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:myduty/screens/main_page.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -32,7 +33,7 @@ class MyCard extends StatelessWidget {
 
       appBar: AppBar(
         backgroundColor: Color.fromARGB(1, 250, 250, 250),
-        title: Text('Seoul Hospital'),
+        title: Text('서울 삼성 병원'),
         centerTitle: true,
         elevation: 0.0,
       ),
@@ -73,6 +74,30 @@ class MyCard extends StatelessWidget {
           ],
         ),
       ),
+
+      body: Center(
+        child:
+          Column(
+            children: <Widget>[
+              SizedBox(height: 110),
+              Row(
+                children: <Widget>[
+                  Expanded(
+                    child : TableCalendar(
+
+                      firstDay: DateTime.utc(2021, 10, 16),
+                      lastDay: DateTime.utc(2030, 3, 14),
+                      focusedDay: DateTime.now(),
+                    ),
+
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+      ),
+
       bottomNavigationBar: DefaultTabController(
         length: 3,
         child: Builder(
