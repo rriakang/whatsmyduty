@@ -25,7 +25,7 @@ class MyCard extends StatelessWidget {
         centerTitle: true,
         elevation: 0.0,
       ),
-      drawer: Drawer(
+      endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -39,22 +39,22 @@ class MyCard extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home, color:Colors.grey[850]),
+              trailing: Icon(Icons.home, color:Colors.grey[850]),
               title: Text("Duty 유형 수정"),
               onTap: () => print("home!!"),
             ),
             ListTile(
-              leading: Icon(Icons.group, color:Colors.grey[850]),
+              trailing: Icon(Icons.group, color:Colors.grey[850]),
               title: Text("공유하기"),
               onTap: () => print("공유하기"),
             ),
             ListTile(
-              leading: Icon(Icons.settings, color:Colors.grey[850]),
+              trailing: Icon(Icons.settings, color:Colors.grey[850]),
               title: Text("설정"),
               onTap: () => print("Setting!!"),
             ),
             ListTile(
-              leading: Icon(Icons.question_answer, color:Colors.grey[850]),
+              trailing: Icon(Icons.question_answer, color:Colors.grey[850]),
               title: Text("Q&A"),
               onTap: () => print("Q&A!!"),
             ),
