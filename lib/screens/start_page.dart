@@ -39,12 +39,18 @@ class StartPage extends StatelessWidget {
                   // 네이버 로그인 로직
                 },
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Color(0xFF1EC800)), // 네이버 색상
+                  backgroundColor: MaterialStateProperty.all(Color(0xFF03C75A)), // 네이버 색상
                   padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 12.0)),
                   textStyle: MaterialStateProperty.all(TextStyle(fontWeight: FontWeight.bold)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0), // 12픽셀 둥근 모서리
+                    ),
+                  ),
                 ),
               ),
             ),
+            // 카카오로 시작하기 버튼
             // 카카오로 시작하기 버튼
             Container(
               margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 50.0),
@@ -52,9 +58,19 @@ class StartPage extends StatelessWidget {
                 onPressed: () {
                   // 카카오 로그인 로직
                 },
-                child: Text('카카오로 시작하기'),
+                child: Text(
+                  '카카오로 시작하기',
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.black),
+                ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.yellow),
+                  backgroundColor: MaterialStateProperty.all(Color(0xFFFEE500)), // 카카오 색상
+                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10.0)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0), // 12픽셀 둥근 모서리
+                    ),
+                  ),
+                  textStyle: MaterialStateProperty.all(TextStyle(color: Colors.black)),
                 ),
               ),
             ),
@@ -65,9 +81,17 @@ class StartPage extends StatelessWidget {
                 onPressed: () {
                   // 애플 로그인 로직
                 },
-                child: Text('애플로 시작하기'),
+                child: Text('애플로 시작하기',
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, color: Colors.white),),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black),
+                  backgroundColor: MaterialStateProperty.all(Colors.black), // 애플 색상
+                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 10.0)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0), // 12픽셀 둥근 모서리
+                    ),
+                  ),
+                  textStyle: MaterialStateProperty.all(TextStyle(color: Colors.white)),
                 ),
               ),
             ),
