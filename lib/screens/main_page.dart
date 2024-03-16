@@ -3,31 +3,16 @@ import 'package:flutter/material.dart';
 //import 'package:myduty/screens/main_page.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:get/get.dart';
 
 
 
 
 
-void main() => runApp(MyApp());
 
 
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'First app',
-      theme: ThemeData.light().copyWith(
-        appBarTheme: AppBarTheme(),
-      ),
-      home: MyCard(),
-    );
-  }
-}
-
-
-
-class MyCard extends StatelessWidget {
+class Myduty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

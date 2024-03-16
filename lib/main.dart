@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:myduty/screens/start_page.dart';
 import 'package:myduty/screens/login_page.dart';
+import 'package:myduty/screens/main_page.dart';
 
 
 void main() async {
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: "/login",
           page: () => LoginPage(),
+        ),
+        GetPage(
+          name: "/main",
+          page: () => Myduty(),
         ),
         // GetPage(
         //   name: "/main",

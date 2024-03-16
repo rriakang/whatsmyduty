@@ -35,9 +35,7 @@ class StartPage extends StatelessWidget {
                   '네이버로 시작하기',
                   style: TextStyle(fontSize: 16.0, color: Colors.white),
                 ),
-                onPressed: () {
-                  // 네이버 로그인 로직
-                },
+                onPressed: () => Get.toNamed("/main"),
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Color(0xFF03C75A)), // 네이버 색상
                   padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 12.0)),
@@ -46,6 +44,7 @@ class StartPage extends StatelessWidget {
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0), // 12픽셀 둥근 모서리
                     ),
+
                   ),
                 ),
               ),
