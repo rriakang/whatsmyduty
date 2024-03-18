@@ -8,6 +8,7 @@ import 'package:myduty/widgets/popup.dart';
 class Myduty extends StatefulWidget {
   @override
   _MydutyState createState() => _MydutyState();
+  Color myBlueColor = Color(0xFFE1EEFF);
 }
 
 class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
@@ -69,6 +70,7 @@ class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
   }
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -78,7 +80,67 @@ class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
         elevation: 0.0,
       ),
       endDrawer: Drawer(
-        // Drawer의 내용은 이전과 동일하게 유지합니다.
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.black26,
+                // backgroundImage: AssetImage('assets/gozero.png'),
+              ),
+              accountName: Text(
+                '강리라',
+                style: TextStyle(
+                color: Colors.black, // 여기서 원하는 색상으로 변경
+              ),),
+              accountEmail: Text(
+                  'rirakang@gachon.ac.kr',
+                  style: TextStyle(
+                  color: Colors.black, // 여기서 원하는 색상으로 변경
+                ),
+              ),
+              onDetailsPressed: () {
+                print('Hello, My Hope World!');
+              },
+              decoration: BoxDecoration(
+                color: Color(0xFFE1EEFF),
+              ),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.home,
+                color: Colors.grey[850],
+              ),
+              title: Text('Home'),
+              onTap: () {
+                print('Home button is clicked!');
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.settings,
+                color: Colors.grey[850],
+              ),
+              title: Text('settings'),
+              onTap: () {
+                print('settings button is clicked!');
+              },
+              trailing: Icon(Icons.add),
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.question_answer,
+                color: Colors.grey[850],
+              ),
+              title: Text('Q&A'),
+              onTap: () {
+                print('Q&A button is clicked!');
+              },
+              trailing: Icon(Icons.add),
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: Column(
