@@ -45,5 +45,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+    <string>이 앱에서는 카메라 기능을 사용합니다.</string>
+
 </dict>
 </plist>

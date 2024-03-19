@@ -4,6 +4,7 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:get/get.dart';
 import 'package:myduty/widgets/popup.dart';
+import 'package:myduty/services/camera_service.dart';
 
 class Myduty extends StatefulWidget {
   @override
@@ -55,9 +56,12 @@ class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
         ),
       ],
     ).then((value) {
-      isMenuShown = false; // 메뉴가 선택되거나 취소되었으므로 플래그를 리셋합니다.
-      if (value != null) {
-        // 메뉴 선택에 따른 동작 처리
+      // 메뉴가 선택되거나 취소되었으므로 플래그를 리셋합니다.
+      isMenuShown = false;
+
+      // "카메라" 항목이 선택되었다면 _openCamera() 메소드를 호출합니다.
+      if (value == "camera") {
+        CameraService.openCamera(context);
       }
     });
   }
