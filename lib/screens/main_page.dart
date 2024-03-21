@@ -5,18 +5,22 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:get/get.dart';
 import 'package:myduty/widgets/popup.dart';
 import 'package:myduty/services/camera_service.dart';
+import 'package:myduty/services/gallery_service.dart';
+import 'package:myduty/widgets/image_section.dart';
 
 class Myduty extends StatefulWidget {
   @override
   _MydutyState createState() => _MydutyState();
   Color myBlueColor = Color(0xFFE1EEFF);
+
 }
+
 
 class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
   late TabController _tabController;
   GlobalKey _registerTabKey = GlobalKey();
   bool isMenuShown = false; // 팝업이 표시되었는지 여부를 추적하는 플래그
-
+  String? selectedImagePath; // 선택한 이미지의 경로를 저장할 변수
   @override
   void initState() {
     super.initState();
@@ -63,9 +67,20 @@ class _MydutyState extends State<Myduty> with TickerProviderStateMixin {
       if (value == "camera") {
         CameraService.openCamera(context);
       }
+
+      else if (value == "gallery") {
+        _pickImage();
+      }
     });
   }
-
+  Future<void> _pickImage() async {
+    final result = await GalleryService.openGallery();
+    if (result != null) {
+      setState(() {
+        selectedImagePath = result;
+      });
+    }
+  }
   @override
   void dispose() {
     _tabController.removeListener(_handleTabSelection);
